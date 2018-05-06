@@ -75,9 +75,9 @@ __global__ void ReduceKernel(const KernelArgs<T> args) {
     } else if (rank == root) {
       Prims::Reduce(
           thisInput + offset,
-		  prevInput + boffset,
-		  thisOutput + offset,
-		  sliceSize, maxOffset,
+          prevInput + boffset,
+          thisOutput + offset,
+          sliceSize, maxOffset,
           step,
           waitReadyFromPrev,
           postDoneToPrev);
