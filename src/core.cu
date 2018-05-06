@@ -885,7 +885,7 @@ ncclResult_t ncclCommInitAll(ncclComm_t* comms, int ndev, const int* devlist) {
 
   showVersion();
 
-  NCCLCHECK(PtrCheck(comms, "CommInitRank", "comms"));
+  NCCLCHECK(PtrCheck(comms, "CommInitAll", "comms"));
 
   if (ndev < 1) {
     WARN("Invalid device count requested : %d", ndev);
