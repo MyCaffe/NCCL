@@ -62,6 +62,6 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="nccl.9.rc" />
+    <ResourceCompile Include="nccl.9.2.rc" />
   </ItemGroup>
 </Project>

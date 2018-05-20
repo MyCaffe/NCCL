@@ -40,12 +40,13 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="nccl.9.rc" />
+    <ResourceCompile Include="nccl.9.1.rc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{85F95A4E-78D0-4E61-8651-4E654F1F9AFA}</ProjectGuid>
+    <ProjectGuid>{A998FE39-2137-49EB-B07D-6C8EEB0721EB}</ProjectGuid>
     <RootNamespace>nccl</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>nccl.9.1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -96,12 +97,12 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>nccl64_134d.9.1</TargetName>
-    <IntDir>$(Platform)\$(Configuration)\obj.9\</IntDir>
+    <TargetName>nccl64_134.9.1</TargetName>
+    <IntDir>$(Platform)\$(Configuration)\obj.9.1d\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>nccl64_134.9.1</TargetName>
-    <IntDir>$(Platform)\$(Configuration)\obj.9\</IntDir>
+    <IntDir>$(Platform)\$(Configuration)\obj.9.1\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
