@@ -16,10 +16,17 @@ static ncclResult_t PointerCheck(const void* pointer, struct ncclComm* comm, con
     WARN("%s : %s is not a valid pointer\n", opname, ptrname);
     return ncclInvalidDevicePointer;
   }
-  if (attr.memoryType == cudaMemoryTypeDevice && attr.device != comm->cudaDev) {
+#ifdef CUDA11_0
+  if (attr.type == cudaMemoryTypeDevice && attr.device != comm->cudaDev) {
     WARN("%s : %s allocated on device %d mismatchs with NCCL device %d \n", opname, ptrname, attr.device, comm->cudaDev);
     return ncclInvalidDevicePointer;
   }
+#else
+  if (attr.memoryType == cudaMemoryTypeDevice && attr.device != comm->cudaDev) {
+	  WARN("%s : %s allocated on device %d mismatchs with NCCL device %d \n", opname, ptrname, attr.device, comm->cudaDev);
+	  return ncclInvalidDevicePointer;
+  }
+#endif
   return ncclSuccess;
 }
 
