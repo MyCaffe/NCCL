@@ -1,9 +1,9 @@
 <H2>Installation Instructions</H2>
 To build and use <b>NCCL 1.3.4</b> you will need to do the following steps.  As a side note, we are using (and recommend) CUDA 11.0.2 and Visual Studio 2017 on Windows 10 Pro for all of our testing.
 </br>
-<H3>Install NVIDIA CUDA Libraries</H3>
+<H3>NVIDIA CUDA Libraries</H3>
 Install CUDA 11.0.2 as shown below.
-<H4>A. CUDA 11.0.2 - Install NVIDIA CUDA and cuDNN Libraries</H4>
+<H4>A. Install NVIDIA CUDA Libraries</H4>
 1.) Install the NVIDIA CUDA 11.0.2 Toolkit for Windows 10 from https://developer.nvidia.com/cuda-downloads. 
 </br>
 <H4>B. Building NCCL 1.3.4</H4>
