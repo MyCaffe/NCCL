@@ -39,3 +39,19 @@ Note, the build also copies the required 'cudart64_xxx.dll' into the same direct
 version of CUDA targeted.
 
 So for example, when targeting CUDA 11, the 'cudart64_110.dll' is copied into the directory.
+
+<H4>Usage</H4>
+
+The 'nccl.h' file located at 'https://github.com/MyCaffe/NCCL/blob/master/src/nccl.h' defines the
+main entrypoints into the 'nccl_134_xxx.dll'' several of which are described as follows:
+
+ncclCommInitRank - Creates a new communicator (multi process version).
+ncclCommInitAll - Creates a clique of communicators.
+ncclCommDestroy - Frees resources associated with communicator object.
+ncclAllReduce - Reduces data arrays of length count in sendbuff using op operation, and leaves identical copies of result on each GPUs recvbuff.
+ncclBcast - Copies count values from root to all other devices.
+ncclGetErrorString - Returns nice error message.
+
+For more function and parameter descriptions and format, callable by the C language, please see 'nccl.h'.
+
+
