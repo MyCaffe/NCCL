@@ -54,4 +54,10 @@ ncclGetErrorString - Returns nice error message.
 
 For more function and parameter descriptions and format, callable by the C language, please see 'nccl.h'.
 
+Use the LoadLibrary and GetProcAddress Win32 functions to access each of the 'nccl' functions.  For an example on how to do this, please
+see the Initialize method at line 57 of https://github.com/MyCaffe/MyCaffe/blob/master/CudaDnnDLL/Cuda%20Files/nccl.cu.
+
+For more information on programming DLL's in Windows, see https://docs.microsoft.com/en-us/windows/win32/dlls/run-time-dynamic-linking.
+
+
 
