@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by nccl.9.rc
+// Used by nccl.11.1.rc
 //
 
 // Next default values for new objects
