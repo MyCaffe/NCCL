@@ -120,6 +120,7 @@ copy "$(CUDA_PATH_V11_7)\bin\cudart*.dll" "$(OutDir)"</Command>
       <Defines>CUDA11_0,COMPILING_NCCL</Defines>
       <CodeGeneration>compute_52,sm_52;compute_53,sm_53;compute_60,sm_60;compute_70,sm_70;compute_80,sm_80</CodeGeneration>
       <CudaRuntime>Shared</CudaRuntime>
+      <CompileOut>$(CudaIntDirFullPath).11.7\%(Filename)%(Extension).obj</CompileOut>
     </CudaCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
