@@ -1,8 +1,8 @@
 <H2>Installation Instructions</H2>
-To build and use <b>NCCL 1.3.4</b> you will need to do the following steps.  As a side note, we are using (and recommend) CUDA 11.2 and Visual Studio 2019 on Windows 10 Pro for all of our testing.
+To build and use <b>NCCL 1.3.4</b> you will need to do the following steps.  As a side note, we are using (and recommend) CUDA 11.8 and Visual Studio 2022 on Windows 10 Pro for all of our testing.
 </br>
 <H4>A. Install NVIDIA CUDA Libraries</H4>
-1.) Install the NVIDIA CUDA 11.2 Toolkit for Windows 10 from https://developer.nvidia.com/cuda-downloads. 
+1.) Install the NVIDIA CUDA 11.8 Toolkit for Windows 10 from https://developer.nvidia.com/cuda-downloads. 
 </br>
 <H4>B. Building NCCL 1.3.4</H4>
 
@@ -12,16 +12,14 @@ All NCCL builds are 64-bit builds and are only usable by 64-bit applications.
 The NCCL solution is configured to build several different versions of NCCL each for a specific version of CUDA. Currently the 'windows/nccl.sln' solution
 targets the following NCCL builds:
 
-* nccl.10.1.vcxproj - targets CUDA 10.1 (requires CUDA 10.1 and VS2017 build to be installed)
-* nccl.10.2.vcxproj - targets CUDA 10.2 (requires CUDA 10.2 and VS2017 build to be installed)
-* nccl.11.1.vcxproj - targets CUDA 11.1 (requires CUDA 11.1 to be installed)
-* nccl.11.2.vcxproj - targets CUDA 11.2 (requires CUDA 11.2 to be installed)
+* nccl.11.7.vcxproj - targets CUDA 11.7 (requires CUDA 11.7 to be installed)
+* nccl.11.8.vcxproj - targets CUDA 11.8 (requires CUDA 11.8 to be installed)
 
-If you only want to target a single version of CUDA (such as CUDA 11.2), just build the corresponding *.vcxproj noted above.
+If you only want to target a single version of CUDA (such as CUDA 11.8), just build the corresponding *.vcxproj noted above.
 
 The resulting DLLs from the build are placed into either the NCCL\windows\x64\Debug or NCCL\windows\x64\Release directory depending
 on your build type.  Each resulting DLL file name is appended with the CUDA version that it targets.  So for example
-the CUDA 11 version is named 'nccl64_134.11.0.dll' for the release version.
+the CUDA 11.8 version is named 'nccl64_134.11.8.dll' for the release version.
 
 The resulting EXE's for testing are placed into either the NCCL\windows\x64\Debug or NCCL\windows\x64\Release directory
 depending on your build type. The following test executables are built:
