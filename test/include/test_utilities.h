@@ -308,9 +308,12 @@ double CheckDelta(const T* results, const T* expected, int N) {
   CUDACHECK(cudaHostGetDevicePointer((void**)&devexp, (void*)expected, 0));
   CUDACHECK(cudaHostRegister((void*)&maxerr, sizeof(double), 0));
   CUDACHECK(cudaHostGetDevicePointer(&devmax, &maxerr, 0));
+  
   deltaKern<T, 512><<<1, 512>>>(results, devexp, N, devmax);
+
   CUDACHECK(cudaHostUnregister(&maxerr));
-  CUDACHECK(cudaHostUnregister((void*)devexp));
+  CUDACHECK(cudaHostUnregister((void*)expected));
+
   return maxerr;
 }
 
