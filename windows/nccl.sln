@@ -67,6 +67,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reduce_test", "test\single\
 		{D9338055-1841-4D50-8C8F-8822F68E1D98} = {D9338055-1841-4D50-8C8F-8822F68E1D98}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nccl.12.3", "nccl.12.3.vcxproj", "{50017638-3E46-4A39-9F24-481349ABE3F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -203,6 +205,14 @@ Global
 		{C219BFC8-7654-4F99-AA62-FA5CAE1CD424}.Release|x64.Build.0 = Release|x64
 		{C219BFC8-7654-4F99-AA62-FA5CAE1CD424}.Release|x86.ActiveCfg = Release|Win32
 		{C219BFC8-7654-4F99-AA62-FA5CAE1CD424}.Release|x86.Build.0 = Release|Win32
+		{50017638-3E46-4A39-9F24-481349ABE3F9}.Debug|x64.ActiveCfg = Debug|x64
+		{50017638-3E46-4A39-9F24-481349ABE3F9}.Debug|x64.Build.0 = Debug|x64
+		{50017638-3E46-4A39-9F24-481349ABE3F9}.Debug|x86.ActiveCfg = Debug|x64
+		{50017638-3E46-4A39-9F24-481349ABE3F9}.Debug|x86.Build.0 = Debug|x64
+		{50017638-3E46-4A39-9F24-481349ABE3F9}.Release|x64.ActiveCfg = Release|x64
+		{50017638-3E46-4A39-9F24-481349ABE3F9}.Release|x64.Build.0 = Release|x64
+		{50017638-3E46-4A39-9F24-481349ABE3F9}.Release|x86.ActiveCfg = Release|x64
+		{50017638-3E46-4A39-9F24-481349ABE3F9}.Release|x86.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
