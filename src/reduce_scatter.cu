@@ -50,7 +50,7 @@ __global__ void ReduceScatterKernel(const KernelArgs<T> args) {
   const int nranks = args.nRanks;
   const int buffSize = args.buffSize / sizeof(T);
   const int sliceSize = buffSize / NUM_BUFCHUNKS;
-  
+
   int step = 0;
   int poffset, noffset = 0;
 
