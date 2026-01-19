@@ -99,7 +99,7 @@ void ArgsSetup(KernelArgs<T> *args, const void* sendbuff, void* recvbuff,
 		const int root, const int count, ncclComm *comm) {
   args->nRanks = comm->nRanks;
   args->root = root;
-  args->buffSize = comm->buffSize;
+  args->buffSize = (int)comm->buffSize;
   args->N = count;
   args->opIndex = comm->opSched;
   args->opCounter = comm->opCounter;
